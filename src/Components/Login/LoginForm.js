@@ -4,6 +4,7 @@ import {Icon} from 'react-icons-kit';
 import {at} from 'react-icons-kit/fa/at';
 import {pencil} from 'react-icons-kit/fa/pencil';
 import firebase from 'firebase/app';
+import 'firebase/auth';
 
 class LoginForm extends React.Component{
     state = {
@@ -106,7 +107,7 @@ class LoginForm extends React.Component{
         event.preventDefault();
         const email = this.emailRef.current.props.value;
         const password = this.passwordRef.current.props.value;
-        firebase.auth().signInWithEmailAndPassword(email, password)
+       firebase.auth().signInWithEmailAndPassword(email, password)
         .then(res => {
             localStorage.setItem('token',res.user.ra);
             this.props.history.replace('/home')})
