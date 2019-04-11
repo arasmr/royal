@@ -98,7 +98,7 @@ class LoginForm extends React.Component{
     componentDidMount(){
         const token = localStorage.getItem('token')
         if(token !== null){
-            this.props.history.replace('/home')
+            this.props.history.replace('/')
         }
     }
     
@@ -110,8 +110,11 @@ class LoginForm extends React.Component{
        firebase.auth().signInWithEmailAndPassword(email, password)
         .then(res => {
             localStorage.setItem('token',res.user.ra);
-            this.props.history.replace('/home')})
-        .catch(err => console.log(err));
+            this.props.history.replace('/')})
+        .catch(err => this.setState({
+            errorText:'Login Failed. Try Again',
+            failed:true
+        }));
         event.currentTarget.reset();
     }
 

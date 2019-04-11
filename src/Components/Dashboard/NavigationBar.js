@@ -9,6 +9,7 @@ import {
   NavLink,
  } from 'reactstrap';
 import firebase from 'firebase/app';
+import OrderModal from '../Order/OrderModal';
 import SettingsModal from '../Settings/SettingsModal';
 
 
@@ -69,6 +70,13 @@ export default class NavigationBar extends React.Component{
                                 loadSampleMenuItem={this.props.loadSampleMenuItem}
                                 menuItems ={this.props.menuItems}
                                 handlePicture = {this.props.handlePicture}
+                            />
+                        </NavItem>
+                        <NavItem hidden={!this.state.logged_in}>
+                            <OrderModal
+                                order={this.props.order}
+                                deleteOrder={this.props.deleteOrder}
+                                menuItems={this.props.menuItems}
                             />
                         </NavItem>
                         <NavItem>

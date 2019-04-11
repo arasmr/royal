@@ -84,36 +84,37 @@ export default class Dashboard extends React.Component{
     }
 
     // *********** Upload file to Cloudinary ******************** //
-uploadFile = (e,key) => {
-    let file = e.target.files[0];
-    var url = `https://api.cloudinary.com/v1_1/djgv39mwv/upload`;
-    var xhr = new XMLHttpRequest();
-    var fd = new FormData();
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhr.onreadystatechange = (function(e) {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        const data = Object.values(JSON.parse(xhr.responseText))[13];
-        this.setState({url:data},(() => {
-            const updatedMenuItem = {
-                ...this.state.menuItem,
-                'image' : data
-            };
-            this.updateMenuItem(key,updatedMenuItem);
-        }));
-      }
-    }.bind(this));
-  
-    fd.append('upload_preset', 'ombjh6fb');
-    fd.append('tags', 'browser_upload');
-    fd.append('file', file);
-    xhr.send(fd);
-  }
+    uploadFile = (e,key) => {
+        let file = e.target.files[0];
+        var url = `https://api.cloudinary.com/v1_1/djgv39mwv/upload`;
+        var xhr = new XMLHttpRequest();
+        var fd = new FormData();
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.onreadystatechange = (function(e) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const data = Object.values(JSON.parse(xhr.responseText))[13];
+            this.setState({url:data},(() => {
+                const updatedMenuItem = {
+                    ...this.state.menuItem,
+                    'image' : data
+                };
+                this.updateMenuItem(key,updatedMenuItem);
+            }));
+        }
+        }.bind(this));
+    
+        fd.append('upload_preset', 'ombjh6fb');
+        fd.append('tags', 'browser_upload');
+        fd.append('file', file);
+        xhr.send(fd);
+    }
 
-  handlePicture = (e,key) => {
-      this.uploadFile(e,key);
-  }
+    handlePicture = (e,key) => {
+        this.uploadFile(e,key);
+    }
     render(){
+        console.log(this.state.order);
         return(
             <div className="dashboard">
                 <div className="navigation-bar">
@@ -125,6 +126,8 @@ uploadFile = (e,key) => {
                         loadSampleMenuItem={this.loadSampleMenuItem}
                         menuItems ={this.state.menuItems}
                         handlePicture = {this.handlePicture}
+                        order={this.state.order}
+                        deleteOrder={this.deleteOrder}
                     />
                 </div>
                 <div className="page-content">

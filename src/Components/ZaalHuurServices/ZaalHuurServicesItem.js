@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
-class BuffetMenuItem extends React.Component{
+class ZaalHuurServicesItem extends React.Component{
     render(){
         const { image, name, desc} = this.props.details;
         return (
@@ -11,8 +10,8 @@ class BuffetMenuItem extends React.Component{
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{desc}</p>
                     <div style={{margin:'1%'}}>
-                        <a onClick={this.props.addToOrder} className="btn btn-sm btn-outline-primary" style={{float:'right'}}>Add To Card</a>
-                        <a href="https://" className="btn btn-sm btn-outline-primary" style={{float:'left'}}>See Details</a>
+                        <button onClick={() => this.props.addToOrder(this.props.index)} className="btn btn-sm btn-outline-primary" style={{float:'right'}}>Add To Card</button>
+                        <button className="btn btn-sm btn-outline-primary" style={{float:'left'}}>See Details</button>
                     </div>
                 </div>
             </div>
@@ -20,4 +19,4 @@ class BuffetMenuItem extends React.Component{
     }
 };
 
-export default BuffetMenuItem;
+export default ZaalHuurServicesItem;

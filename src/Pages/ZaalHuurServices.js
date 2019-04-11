@@ -4,6 +4,9 @@ import ZaalHuurServicesItem from '../Components/ZaalHuurServices/ZaalHuurService
 import base from '../base';
 import PropTypes from 'prop-types';
 import NavigationBar from '../Components/Dashboard/NavigationBar';
+import Notification from '../Components/Notification';
+
+const notify = new Notification();
 
 class ZaalHuurServices extends React.Component{
     state = {
@@ -90,6 +93,7 @@ class ZaalHuurServices extends React.Component{
         order[key] = order[key] + 1 || 1;
         // set the state
         this.setState({order:order});
+        notify.setNotification('success','Item Added');
     }
     render(){
         return (
@@ -106,7 +110,8 @@ class ZaalHuurServices extends React.Component{
                                 details={this.state.menuItems[key]} 
                                 addToOrder={this.addToOrder}
                             />
-                        )}    
+                        )}
+                        <Notification/>    
                     </Container>
                 </div>
             </div>
