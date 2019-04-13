@@ -94,11 +94,20 @@ class BruiloftenMenu extends React.Component{
     }
 
     render(){
-        console.log(this.state.menuItems);
         return (
             <div className="dashboard">
                 <div className="navigation-bar">
-                    <NavigationBar/>
+                    <NavigationBar
+                        history={this.props.history}
+                        addMenuItem={this.addMenuItem}
+                        deleteMenuItem = {this.deleteMenuItem} 
+                        updateMenuItem = {this.updateMenuItem}
+                        loadSampleMenuItem={this.loadSampleMenuItem}
+                        menuItems ={this.state.menuItems}
+                        handlePicture = {this.handlePicture}
+                        order={this.state.order}
+                        deleteOrder={this.deleteOrder}
+                    />
                 </div>
                 <h2>Soup</h2>
                 <hr/>

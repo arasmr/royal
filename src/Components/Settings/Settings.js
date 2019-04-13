@@ -22,7 +22,6 @@ class Settings extends React.Component{
                 addMenuItem={this.props.addMenuItem}
                 handlePicture = {this.props.handlePicture}               
             />
-            <button onClick={this.props.loadSampleMenuItem}>Load Sample Menu Items</button>
             </div>
         )
     }

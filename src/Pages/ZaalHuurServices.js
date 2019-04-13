@@ -99,7 +99,17 @@ class ZaalHuurServices extends React.Component{
         return (
             <div className="dashboard">
                 <div className="navigation-bar">
-                    <NavigationBar/>
+                    <NavigationBar
+                        history={this.props.history}
+                        addMenuItem={this.addMenuItem}
+                        deleteMenuItem = {this.deleteMenuItem} 
+                        updateMenuItem = {this.updateMenuItem}
+                        loadSampleMenuItem={this.loadSampleMenuItem}
+                        menuItems ={this.state.menuItems}
+                        handlePicture = {this.handlePicture}
+                        order={this.state.order}
+                        deleteOrder={this.deleteOrder}
+                    />
                 </div>
                 <div className="buffet-container">
                     <Container className="buffet-menu">
