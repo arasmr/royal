@@ -6,7 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
+  NavLink
  } from 'reactstrap';
 import firebase from 'firebase/app';
 import OrderModal from '../Order/OrderModal';
@@ -46,17 +46,19 @@ export default class NavigationBar extends React.Component{
 
     render(){
         return(
-            <div>
-                <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">Royal Catering</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
+            <Navbar color="light" light expand="md">
+                <NavbarBrand href="/">Royal Catering</NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Party Rental</NavLink>
+                            <NavLink href="/zaalhuur" >Zaalhuur Services</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/components/">Catering</NavLink>
+                            <NavLink href="/bruiloften">Bruiloften</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/components/">Party Rental</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="/contact">Contact</NavLink>
@@ -83,10 +85,9 @@ export default class NavigationBar extends React.Component{
                             <NavLink hidden={this.state.logged_in} href="/login">Login</NavLink>
                             <NavLink hidden={!this.state.logged_in} onClick={() => this.handleLogout()} href="#">Logout</NavLink>
                         </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
-            </div>
+                    </Nav>
+                </Collapse>
+            </Navbar>
         )
     }
 }

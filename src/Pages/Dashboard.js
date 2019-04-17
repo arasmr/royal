@@ -114,7 +114,6 @@ export default class Dashboard extends React.Component{
         this.uploadFile(e,key);
     }
     render(){
-        console.log(this.state.order);
         return(
             <div className="dashboard">
                 <div className="navigation-bar">
@@ -133,7 +132,6 @@ export default class Dashboard extends React.Component{
                 <div className="page-content">
                     <PageContent history={this.props.history}/>
                 </div>
-                {/* <button onClick={() => this.uploadPicture('key')}>add picture</button> */}
             </div>
         )
     }

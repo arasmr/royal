@@ -23,7 +23,7 @@ code {
 }
 
 .page-content{
-  max-width: 1200px;
+  max-width: 100%;
   text-align: center;
   margin:0 auto;
   padding:0;
@@ -40,12 +40,12 @@ code {
 }
 
 .content_component{
+  width:100%;
   float:left;
   margin:0 auto;
   padding:0;
   text-align: center;
   margin-top:2%;
-
 }
 
 .content_comp_option{
@@ -61,7 +61,7 @@ code {
 }
 
 .navigation-bar{
-  max-width: 1400px;
+  max-width: 100%;
   margin:0 auto;
   padding:0;
 }
@@ -69,7 +69,7 @@ code {
 .dashboard{
   margin:0 auto;
   padding:0;
-  max-width: 1400px;
+  max-width: 1450px;
   text-align:center;
 }
 

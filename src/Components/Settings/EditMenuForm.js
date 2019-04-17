@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Row,Col} from 'reactstrap';
 
 class EditMenuForm extends React.Component {
 
@@ -7,7 +8,7 @@ class EditMenuForm extends React.Component {
         menuItem : PropTypes.shape({
             image : PropTypes.string,
             name : PropTypes.string,
-            price : PropTypes.number,
+            category : PropTypes.string,
             desc : PropTypes.string,
             type : PropTypes.string,
         }),
@@ -32,50 +33,67 @@ class EditMenuForm extends React.Component {
     render() {
         return (
             <div className="menu-edit">
-            <input 
-                style={{'float' :'left', 'width':'33%'}}
-                type="text" 
-                name = "name" 
-                onChange = {this.handleChange} 
-                value = {this.props.menuItem.name}
-            />
-            <input 
-                style={{'float' :'left', 'width':'33%'}}
-                type="text" 
-                name = "price" 
-                onChange = {this.handleChange} 
-                value = {this.props.menuItem.price}
-            />
-            <select 
-                style={{'float' :'left', 'width':'33%'}}
-                type="text" 
-                name = "type" 
-                onChange = {this.handleChange} 
-                value= {this.props.menuItem.type}
-            >
-                <option value="Voorgerechten">Voorgerechten</option>
-                <option value="Hoofdgerechten">Hoofdgerechten</option>
-                <option value="Nagerechten">Nagerechten</option>
-            </select>
-            <textarea 
-                type="text" 
-                name = "desc" 
-                onChange = {this.handleChange} 
-                value = {this.props.menuItem.desc}
-            />
-                <input 
-                    style={{'float' :'left', 'width':'70%'}}
-                    type="text" 
-                    name = "image"
-                    onChange = {(e) => this.handlePicture(e)}
-                    value= {this.props.menuItem.image}
-                />
-                <input 
-                    style={{'float' :'rigth', 'width':'30%'}}
-                    type="file" 
-                    onChange={(e) => this.props.handlePicture(e ,this.props.index)} 
-                />
-            <button onClick={() => {this.props.deleteMenuItem(this.props.index)}}>Remove Menu Item</button>
+                <Row style={{width:"100%",textAlign:'center'}}>
+                    <Col style={{border:'1px solid black',textAlign:'center'}}>
+                        <img
+                            style={{width:'100%', height:'250px', marginLeft:'2%'}}
+                            src={this.props.menuItem.image} alt="selected"
+                        />
+                        <input 
+                            style={{width:'100%',border:'none'}}
+                            type="file" 
+                            onChange={(e) => this.props.handlePicture(e ,this.props.index)} 
+                        />
+                    </Col>
+                    <Col style={{margin:'1%'}}>
+                        <input 
+                            style={{width:'100%',border:'1px solid black'}}
+                            type="text" 
+                            name = "name" 
+                            onChange = {this.handleChange} 
+                            value = {this.props.menuItem.name}
+                        />
+                        <select
+                            style={{width:'100%',border:'1px solid black'}}
+                            type="text" 
+                            name = "category" 
+                            placeholder="category"
+                            onChange={this.handleChange} 
+                        >
+                            <option style={{width:'100%'}} value="Bruiloften">Bruiloften</option>
+                            <option style={{width:'100%'}} value="Zaalhuur Services">Zaalhuur Services</option>
+                        </select>
+                        <select 
+                            style={{width:'100%',border:'1px solid black'}}
+                            type="text" 
+                            name = "type" 
+                            onChange = {this.handleChange} 
+                            value= {this.props.menuItem.type}
+                        >
+                            <option style={{width:'100%'}} value="Soup">Soup</option>
+                            <option style={{width:'100%'}} value="Koud Voorgerechten">Koud Voorgerechten</option>
+                            <option style={{width:'100%'}} value="Warm Voorgerechten">Warm Voorgerechten</option> 
+                            <option style={{width:'100%'}} value="Hoofdgerechten">Hoofdgerechten</option>
+                            <option style={{width:'100%'}} value="Salades">Salades</option>
+                            <option style={{width:'100%'}} value="Nagerechten">Nagerechten</option>
+                            <option style={{width:'100%'}} value="Cake">Cake-Bruidstaart</option>
+                            <option style={{width:'100%'}} value="Drinks">Drinks-Dranks</option>
+                            <option style={{width:'100%'}} value="Koekies">Koekies</option>
+                            <option style={{width:'100%'}} value="Services">Services</option>
+                            <option style={{width:'100%'}} value="Other">Other</option>
+                        </select>
+                    </Col>
+                </Row>
+                <Row style={{margin:'1%',width:'100%'}}>
+                    <textarea 
+                        style={{width:'100%',border:'1px solid black'}}
+                        type="text" 
+                        name = "desc" 
+                        onChange = {this.handleChange} 
+                        value = {this.props.menuItem.desc}
+                    />
+                </Row>
+                <button onClick={() => {this.props.deleteMenuItem(this.props.index)}}>Remove Menu Item</button>
             </div>
         )
     }

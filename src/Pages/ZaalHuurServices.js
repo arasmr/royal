@@ -111,17 +111,139 @@ class ZaalHuurServices extends React.Component{
                         deleteOrder={this.deleteOrder}
                     />
                 </div>
+                <h2>Soup</h2>
+                <hr/>
                 <div className="buffet-container">
                     <Container className="buffet-menu">
                         {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Soup' ? 
                             <ZaalHuurServicesItem
                                 key={key} 
                                 index = {key}
                                 details={this.state.menuItems[key]} 
                                 addToOrder={this.addToOrder}
-                            />
-                        )}
-                        <Notification/>    
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Koud Voorgerechten</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Koud Voorgerechten' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Warm Voorgerechten</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Warm Voorgerechten' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Hoofdgerechten</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Hoofdgerechten' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Salades</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Salades' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Nagerechten</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Nagerechten' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Cake-Bruidstaart</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Cake' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Drinks-Dranks</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Drinks' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
+                    </Container>
+                </div>
+                <h2>Koekies</h2>
+                <hr/>
+                <div className="buffet-container">
+                    <Container className="buffet-menu">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Koekies' ? 
+                            <ZaalHuurServicesItem
+                                key={key} 
+                                index = {key}
+                                details={this.state.menuItems[key]} 
+                                addToOrder={this.addToOrder}
+                            /> : null
+                        )}    
                     </Container>
                 </div>
             </div>
