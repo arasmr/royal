@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   text-align: center;
+  max-width: 1460px;
 }
 
 code {
@@ -66,10 +67,87 @@ code {
   padding:0;
 }
 
+/* zaalhuur services */
+
+.zaalhuur-comp{
+  margin:0 auto;
+  padding:0;
+  width:100%;
+  min-width: 350px;
+  text-align:center;
+}
+
+.side_nav_bar{
+  width:"20%";
+  height:"110vh"; 
+  position:"fixed";
+  border-right: 1px solid gray;
+  background: #fff;
+}
+
+.zaalhuur-container{
+  margin:1% auto;
+  padding-left:3%;
+  width:100%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.zaalhuur-item{
+  width:25%;
+  margin:1%;
+  min-height: 50vh;
+}
+
+.card-text{
+  height: 10vh;
+  overflow: auto;
+}
+
+.zaalhuur-modal-item{
+  width:100%;
+  margin:1%;
+}
+
+@media only screen and (max-width: 600px) {
+  .zaalhuur-container {
+    margin:1% auto;
+    text-align: center;
+    padding-left:15%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .zaalhuur-container {
+    margin:1% auto;
+    text-align: center;
+    padding-left:15%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .zaalhuur-container {
+    margin:1% auto;
+    text-align: center;
+    padding-left:3%;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  .zaalhuur-container {
+    margin:1% auto;
+    text-align: center;
+    padding-left:10%;
+  }
+}
+
+
 .dashboard{
   margin:0 auto;
   padding:0;
-  max-width: 1450px;
+  width:100%;
   text-align:center;
 }
 
@@ -314,13 +392,6 @@ audio:not([controls]) {
 [hidden] {
   display: none;
 }
-
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
 a:focus {
   outline: thin dotted;
 }
@@ -328,79 +399,6 @@ a:focus {
 a:active,
 a:hover {
   outline: 0;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-q {
-  quotes: 2 1C 2 1D 2 18 2 19;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
 }
 
 button,
@@ -458,11 +456,6 @@ table {
   border-spacing: 0;
 }
 
-body,
-figure {
-  margin: 0;
-}
-
 legend,
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -477,19 +470,6 @@ input::-moz-focus-inner {
   content: " ";
   clear: both;
   height: 0;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background: #d4d4d4;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
 }
 
 h1 {
@@ -516,55 +496,6 @@ h2 {
 
 h3 {
   font-size: 3rem;
-}
-
-header.top {
-  text-align: center;
-  margin-bottom: 2%;
-}
-
-header.top h1 {
-  font-size: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header.top h3 {
-  margin: 0;
-  font-size: 2rem;
-  color: #f5a623;
-  position: relative;
-  display: inline-block;
-}
-
-header.top h3 span {
-  background: #fff;
-  position: relative;
-  z-index: 2;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-header.top h3:before,
-header.top h3:after {
-  display: block;
-  z-index: 1;
-  background: #000;
-  position: absolute;
-  width: 130%;
-  height: 1px;
-  content: '';
-  top: 5px;
-  margin-left: -15%;
-}
-
-header.top h3:after {
-  top: auto;
-  bottom: 7px;
 }
 
 ul.order li {
@@ -687,9 +618,8 @@ ul.order li span.count span {
 }
 
 .buffet-menu{
-  width:100%;
+  width:25%;
   margin:3% auto;
-  display: flex;
 }
 
 .buffet-item{
@@ -699,7 +629,7 @@ ul.order li span.count span {
 
 .buffet-container{
   width:100%;
-  display: flex;
+  float: left;
   align-content: space-between;
 }
 
@@ -714,3 +644,4 @@ ul.order li span.count span {
   float: right;
   margin:3%;
 }
+

@@ -22,10 +22,10 @@ class BruiloftenMenuItem extends React.Component{
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{desc}</p>
-                    <div style={{margin:'1%'}}>
+                    <div style={{margin:'1%', width:'100%'}}>
                         <button hidden={!this.state.logged_in} onClick={() => this.props.addToOrder(this.props.index)} className="btn btn-sm btn-outline-primary" style={{float:'left'}}>Add To Card</button>
                         <DetailsModal
-                            key={this.props.key}
+                            key={this.props.index}
                             index={this.props.index}
                             addToOrder={this.props.addToOrder}
                             image={image}

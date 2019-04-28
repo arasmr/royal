@@ -36,8 +36,8 @@ class DetailsModal extends React.Component {
           <ModalHeader toggle={this.toggle}>{name}</ModalHeader>
           <ModalBody>
               <ModalItem
-                key={this.props.key} 
-                index = {this.props.key}
+                key={this.props.index} 
+                index = {this.props.index}
                 image={image}
                 name={name}
                 desc={desc}

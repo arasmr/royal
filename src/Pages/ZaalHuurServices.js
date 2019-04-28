@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container} from 'reactstrap';
+import { Container, Col} from 'reactstrap';
 import ZaalHuurServicesItem from '../Components/ZaalHuurServices/ZaalHuurServicesItem';
 import base from '../base';
 import PropTypes from 'prop-types';
@@ -97,7 +97,7 @@ class ZaalHuurServices extends React.Component{
     }
     render(){
         return (
-            <div className="dashboard">
+            <div className="zaalhuur-comp">
                 <div className="navigation-bar">
                     <NavigationBar
                         history={this.props.history}
@@ -111,140 +111,16 @@ class ZaalHuurServices extends React.Component{
                         deleteOrder={this.deleteOrder}
                     />
                 </div>
-                <h2>Soup</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Soup' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Koud Voorgerechten</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Koud Voorgerechten' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Warm Voorgerechten</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Warm Voorgerechten' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Hoofdgerechten</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Hoofdgerechten' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Salades</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Salades' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Nagerechten</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Nagerechten' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Cake-Bruidstaart</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Cake' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Drinks-Dranks</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Drinks' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
-                </div>
-                <h2>Koekies</h2>
-                <hr/>
-                <div className="buffet-container">
-                    <Container className="buffet-menu">
-                        {Object.keys(this.state.menuItems).map((key) => 
-                            this.state.menuItems[key].type === 'Koekies' ? 
-                            <ZaalHuurServicesItem
-                                key={key} 
-                                index = {key}
-                                details={this.state.menuItems[key]} 
-                                addToOrder={this.addToOrder}
-                            /> : null
-                        )}    
-                    </Container>
+                <div className="zaalhuur-container">
+                    {Object.keys(this.state.menuItems).map((key) => 
+                        this.state.menuItems[key].type === 'Services' && this.state.menuItems[key].category === 'Zaalhuur Services' ? 
+                        <ZaalHuurServicesItem
+                            key={key} 
+                            index = {key}
+                            details={this.state.menuItems[key]} 
+                            addToOrder={this.addToOrder}
+                        /> : null
+                    )}    
                 </div>
             </div>
         );
