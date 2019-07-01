@@ -8,7 +8,43 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   text-align: center;
-  max-width: 1460px;
+}
+
+.royal-image{
+  background-image: url("https://www.royalspijkenisse.nl/wp-content/uploads/2017/12/Royal-2130-min.jpg");
+  height:60vh;
+}
+
+/* .title-dashboard{
+  height:60vh;
+} */
+
+/* .button-group {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+} */
+
+.zaalhuur{
+  padding:3%;
+}
+
+.zaalhuur .row{
+  width:100%;
+}
+
+.zaalhuur-item{
+  width:100%;
+  margin:0;
+  padding-left:10% ! important;
+}
+
+/* .button-group:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); 
+} */
+
+.card img{
+  height: 170px;
 }
 
 code {
@@ -33,6 +69,10 @@ code {
 .card_image{
   width:100% ! important;
   height: 180px ! important;
+}
+
+.zaalhuur-item{
+  padding:3%;
 }
 
 .card_details{
@@ -95,11 +135,11 @@ code {
   align-items: center;
 }
 
-.zaalhuur-item{
+/* .zaalhuur-item{
   width:25%;
   margin:1%;
   min-height: 50vh;
-}
+} */
 
 .card-text{
   height: 10vh;

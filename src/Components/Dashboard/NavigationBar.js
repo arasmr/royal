@@ -46,24 +46,24 @@ export default class NavigationBar extends React.Component{
 
     render(){
         return(
-            <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">Royal Catering</NavbarBrand>
+            <Navbar expand="md" light style={{backgroundColor:"#F46488",color:"white"}}>
+                {/* <NavbarBrand href="/">Royal Catering</NavbarBrand> */}
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
+                    <Nav className="mx-auto" navbar>
+                        <NavItem className="p-2">
                             <NavLink href="/zaalhuur" >Zaalhuur Services</NavLink>
                         </NavItem>
-                        <NavItem>
+                        <NavItem className="p-2">
                             <NavLink href="/bruiloften">Bruiloften</NavLink>
                         </NavItem>
-                        <NavItem>
+                        <NavItem className="p-2">
                             <NavLink href="/components/">Party Rental</NavLink>
                         </NavItem>
-                        <NavItem>
+                        <NavItem className="p-2">
                             <NavLink href="/contact">Contact</NavLink>
                         </NavItem>
-                        <NavItem hidden={!this.state.logged_in}>
+                        <NavItem className="p-2" hidden={!this.state.logged_in}>
                             <SettingsModal
                                 history={this.props.history}
                                 addMenuItem={this.props.addMenuItem}
@@ -74,14 +74,14 @@ export default class NavigationBar extends React.Component{
                                 handlePicture = {this.props.handlePicture}
                             />
                         </NavItem>
-                        <NavItem hidden={!this.state.logged_in}>
+                        <NavItem  className="p-2" hidden={!this.state.logged_in}>
                             <OrderModal
                                 order={this.props.order}
                                 deleteOrder={this.props.deleteOrder}
                                 menuItems={this.props.menuItems}
                             />
                         </NavItem>
-                        <NavItem>
+                        <NavItem className="p-2">
                             <NavLink hidden={this.state.logged_in} href="/login">Login</NavLink>
                             <NavLink hidden={!this.state.logged_in} onClick={() => this.handleLogout()} href="#">Logout</NavLink>
                         </NavItem>

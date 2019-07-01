@@ -3,6 +3,7 @@ import NavigationBar from '../Components/Dashboard/NavigationBar';
 import PageContent from '../Components/Dashboard/PageContent';
 import base from '../base';
 import PropTypes from 'prop-types';
+import Header from '../Components/Dashboard/Header';
 
 export default class Dashboard extends React.Component{
     state = {
@@ -116,22 +117,19 @@ export default class Dashboard extends React.Component{
     render(){
         return(
             <div className="dashboard">
-                <div className="navigation-bar">
-                    <NavigationBar 
-                        history={this.props.history}
-                        addMenuItem={this.addMenuItem}
-                        deleteMenuItem = {this.deleteMenuItem} 
-                        updateMenuItem = {this.updateMenuItem}
-                        loadSampleMenuItem={this.loadSampleMenuItem}
-                        menuItems ={this.state.menuItems}
-                        handlePicture = {this.handlePicture}
-                        order={this.state.order}
-                        deleteOrder={this.deleteOrder}
-                    />
-                </div>
-                <div className="page-content">
-                    <PageContent history={this.props.history}/>
-                </div>
+                <Header/>
+                <NavigationBar 
+                    history={this.props.history}
+                    addMenuItem={this.addMenuItem}
+                    deleteMenuItem = {this.deleteMenuItem} 
+                    updateMenuItem = {this.updateMenuItem}
+                    loadSampleMenuItem={this.loadSampleMenuItem}
+                    menuItems ={this.state.menuItems}
+                    handlePicture = {this.handlePicture}
+                    order={this.state.order}
+                    deleteOrder={this.deleteOrder}
+                />
+                <PageContent history={this.props.history}/>
             </div>
         )
     }

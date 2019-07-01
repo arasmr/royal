@@ -111,16 +111,21 @@ class ZaalHuurServices extends React.Component{
                         deleteOrder={this.deleteOrder}
                     />
                 </div>
-                <div className="zaalhuur-container">
-                    {Object.keys(this.state.menuItems).map((key) => 
-                        this.state.menuItems[key].type === 'Services' && this.state.menuItems[key].category === 'Zaalhuur Services' ? 
-                        <ZaalHuurServicesItem
-                            key={key} 
-                            index = {key}
-                            details={this.state.menuItems[key]} 
-                            addToOrder={this.addToOrder}
-                        /> : null
-                    )}    
+                <div className="container zaalhuur">
+                    <div className="row d-flex justify-content-center align-items-center mx-auto">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].type === 'Services' && this.state.menuItems[key].category === 'Zaalhuur Services' ? 
+                            <div className="col-lg-3 col-md-4 col-sm-12 p-2 zaalhuur-item">
+                                <ZaalHuurServicesItem
+                                    key={key} 
+                                    index = {key}
+                                    details={this.state.menuItems[key]} 
+                                    addToOrder={this.addToOrder}
+                                />
+                            </div>
+                            : null
+                        )}    
+                    </div>
                 </div>
             </div>
         );
