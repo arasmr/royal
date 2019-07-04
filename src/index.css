@@ -38,6 +38,14 @@ body {
   padding-left:10% ! important;
 }
 
+.button-group h2{
+  font-family: Lobster, cursive;
+}
+
+.nav-item{
+  font-family: Lobster, cursive;
+}
+
 /* .button-group:hover {
   opacity: 1.0;
   filter: alpha(opacity=100); 
