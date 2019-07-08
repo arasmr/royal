@@ -52,6 +52,9 @@ export default class NavigationBar extends React.Component{
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="mx-auto" navbar>
                         <NavItem className="p-2">
+                            <NavLink href="/" >Home</NavLink>
+                        </NavItem>
+                        <NavItem className="p-2">
                             <NavLink href="/zaalhuur" >Zaalhuur Services</NavLink>
                         </NavItem>
                         <NavItem className="p-2">
@@ -82,7 +85,6 @@ export default class NavigationBar extends React.Component{
                             />
                         </NavItem>
                         <NavItem className="p-2">
-                            <NavLink hidden={this.state.logged_in} href="/login">Login</NavLink>
                             <NavLink hidden={!this.state.logged_in} onClick={() => this.handleLogout()} href="#">Logout</NavLink>
                         </NavItem>
                     </Nav>

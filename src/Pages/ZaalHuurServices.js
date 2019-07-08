@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import NavigationBar from '../Components/Dashboard/NavigationBar';
 import Notification from '../Components/Notification';
 import DetailsModal from '../Components//MenuDetails/DetailsModal';
+import Footer from '../Components/Footer';
 
 const notify = new Notification();
 
@@ -99,7 +100,7 @@ class ZaalHuurServices extends React.Component{
     render(){
         return (
             <div className="zaalhuur-comp">
-                <div className="navigation-bar">
+                <div className="navigation-bar fixed-top">
                     <NavigationBar
                         history={this.props.history}
                         addMenuItem={this.addMenuItem}
@@ -127,6 +128,9 @@ class ZaalHuurServices extends React.Component{
                             : null
                         )}    
                     </div>
+                </div>
+                <div className="zaalhuur-footer fixed-bottom">
+                    <Footer/>
                 </div>
             </div>
         );
