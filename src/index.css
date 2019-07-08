@@ -35,21 +35,23 @@ body {
 .zaalhuur-item{
   width:100%;
   margin:0;
-  padding-left:10% ! important;
+  /* padding-left:10% ! important; */
 }
 
-.button-group h2{
+.button-group h2 a{
   font-family: Lobster, cursive;
+  color:white
 }
 
 .nav-item{
   font-family: Lobster, cursive;
 }
 
-/* .button-group:hover {
-  opacity: 1.0;
-  filter: alpha(opacity=100); 
-} */
+.button-group h2 a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color:white
+}
 
 .card img{
   height: 170px;

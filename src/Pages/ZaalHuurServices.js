@@ -5,6 +5,7 @@ import base from '../base';
 import PropTypes from 'prop-types';
 import NavigationBar from '../Components/Dashboard/NavigationBar';
 import Notification from '../Components/Notification';
+import DetailsModal from '../Components//MenuDetails/DetailsModal';
 
 const notify = new Notification();
 
@@ -112,10 +113,10 @@ class ZaalHuurServices extends React.Component{
                     />
                 </div>
                 <div className="container zaalhuur">
-                    <div className="row d-flex justify-content-center align-items-center mx-auto">
+                    <div className="row d-flex justify-content-center align-items-center mx-auto p-2">
                         {Object.keys(this.state.menuItems).map((key) => 
                             this.state.menuItems[key].type === 'Services' && this.state.menuItems[key].category === 'Zaalhuur Services' ? 
-                            <div className="col-lg-3 col-md-4 col-sm-12 p-2 zaalhuur-item">
+                            <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center justify-content-center zaalhuur-item">
                                 <ZaalHuurServicesItem
                                     key={key} 
                                     index = {key}
