@@ -117,7 +117,7 @@ class ZaalHuurServices extends React.Component{
                     <div className="row d-flex justify-content-center align-items-center mx-auto p-2">
                         {Object.keys(this.state.menuItems).map((key) => 
                             this.state.menuItems[key].type === 'Services' && this.state.menuItems[key].category === 'Zaalhuur Services' ? 
-                            <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center justify-content-center zaalhuur-item">
+                            <div className="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center justify-content-center zaalhuur-item">
                                 <ZaalHuurServicesItem
                                     key={key} 
                                     index = {key}

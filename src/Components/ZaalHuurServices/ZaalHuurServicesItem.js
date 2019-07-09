@@ -19,7 +19,7 @@ class ZaalHuurServicesItem extends React.Component{
         return (
             <div className="card" style={{width:"16rem"}}>
                 <img src={image} className="card-img-top card_image" alt="food"/>
-                <div className="card-body">
+                <div className="card-body item-product">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">{desc}</p>
                     <div>

@@ -38,6 +38,10 @@ body {
   /* padding-left:10% ! important; */
 }
 
+.item-product{
+  height: 241.5px;
+}
+
 .button-group h2 a{
   font-family: Lobster, cursive;
   color:white
@@ -164,7 +168,7 @@ code {
 } */
 
 .card-text{
-  height: 10vh;
+  height: 16vh;
   overflow: auto;
 }
 
@@ -179,35 +183,11 @@ code {
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .zaalhuur-container {
-    margin:1% auto;
-    text-align: center;
-    padding-left:15%;
-  }
-}
-
-@media only screen and (min-width: 780px) {
-  .zaalhuur-container {
-    margin:1% auto;
-    text-align: center;
-    padding-left:3%;
-  }
-}
 @media screen and (max-width: 900px) and (min-width: 600px){
   .zaalhuur{
     padding-top: 10%;
   }
 }
-
-@media only screen and (min-width: 870px) {
-  .zaalhuur-container {
-    margin:1% auto;
-    text-align: center;
-    padding-left:10%;
-  }
-}
-
 
 .dashboard{
   margin:0 auto;
