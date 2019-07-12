@@ -168,7 +168,7 @@ code {
 } */
 
 .card-text{
-  height: 16vh;
+  /* height: 18vh; */
   overflow: auto;
 }
 
