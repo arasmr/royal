@@ -69,10 +69,6 @@ footer{
   padding:2%
 }
 
-.card img{
-  height: 170px;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -92,9 +88,29 @@ code {
   padding:0;
 }
 
+/* item_card */
+
+.card-body{
+  display: block;
+  height: 300px;
+}
+
 .card_image{
   width:100% ! important;
   height: 180px ! important;
+}
+
+.card-text{
+  height: 60%;
+  overflow: auto;
+}
+
+.card-title{
+  height: 15%;
+}
+
+.card-button-group{
+  height:10%;
 }
 
 .zaalhuur-item{
@@ -166,11 +182,6 @@ code {
   margin:1%;
   min-height: 50vh;
 } */
-
-.card-text{
-  /* height: 18vh; */
-  overflow: auto;
-}
 
 .zaalhuur-modal-item{
   width:100%;
