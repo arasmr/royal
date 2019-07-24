@@ -94,8 +94,7 @@ code {
 /* item_card */
 
 .card-body{
-  display: block;
-  height: 300px;
+  height: 200px;
 }
 
 .card_image{
@@ -109,7 +108,8 @@ code {
 }
 
 .card-title{
-  height: 15%;
+  height: 10%;
+  font-size: 1rem;
 }
 
 .card-button-group{
