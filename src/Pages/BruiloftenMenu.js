@@ -110,144 +110,21 @@ class BruiloftenMenu extends React.Component{
                         deleteOrder={this.deleteOrder}
                     />
                 </div>
-                <div>
-                    <SideNavBar/>
-                </div>
-                <div>
-                    <h2>Soup</h2>
-                    <hr/>
-                    <div className="buffet-container" id="soup">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Soup' && this.state.menuItems[key].category === 'Bruiloften' ? 
+                <div className="container zaalhuur">
+                    <div className="row d-flex justify-content-center align-items-center mx-auto p-2">
+                        {Object.keys(this.state.menuItems).map((key) => 
+                            this.state.menuItems[key].category === 'Bruiloften' ? 
+                            <div className="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center justify-content-center zaalhuur-item">
                                 <BruiloftenMenuItem
                                     key={key} 
                                     index = {key}
+                                    type={this.state.menuItems[key].type}
                                     details={this.state.menuItems[key]} 
                                     addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Koud Voorgerechten</h2>
-                    <hr/>
-                    <div className="buffet-container" id="koud_voorgerechten">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Koud Voorgerechten' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Warm Voorgerechten</h2> 
-                    <hr/>
-                    <div className="buffet-container" id="warm_voorgerechten">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Warm Voorgerechten' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Hoofdgerechten</h2>
-                    <hr/>
-                    <div className="buffet-container" id="hoofdgerechten">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Hoofdgerechten' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Salades</h2>
-                    <hr/>
-                    <div className="buffet-container" id="salades">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Salades' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Nagerechten</h2>
-                    <hr/>
-                    <div className="buffet-container" id="nagerechten">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Nagerechten' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Cake-Bruidstaart</h2>
-                    <hr/>
-                    <div className="buffet-container" id="cake">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Cake' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Drinks-Dranks</h2>
-                    <hr/>
-                    <div className="buffet-container" id="drinks">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Drinks' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
-                    </div>
-                    <h2>Koekies</h2>
-                    <hr/>
-                    <div className="buffet-container" id="Koekies">
-                        <Container className="buffet-menu">
-                            {Object.keys(this.state.menuItems).map((key) => 
-                                this.state.menuItems[key].type === 'Koekies' && this.state.menuItems[key].category === 'Bruiloften' ? 
-                                <BruiloftenMenuItem
-                                    key={key} 
-                                    index = {key}
-                                    details={this.state.menuItems[key]} 
-                                    addToOrder={this.addToOrder}
-                                /> : null
-                            )}    
-                        </Container>
+                                />
+                            </div>
+                            : null
+                        )}    
                     </div>
                 </div>
             </div>

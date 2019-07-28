@@ -21,7 +21,7 @@ class ZaalHuurServicesItem extends React.Component{
                 <img src={image} className="card-img-top card_image" alt="food"/>
                 <div className="card-body item-product">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{desc}</p>
+                    <p className="card-text"></p>
                     <div>
                         <button onClick={() => this.props.addToOrder(this.props.index)} hidden={!this.state.logged_in} className="btn btn-sm btn-outline-primary" style={{float:'left'}}>Add To Card</button>
                         <DetailsModal

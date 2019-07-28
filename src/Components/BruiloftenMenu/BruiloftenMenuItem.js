@@ -15,14 +15,15 @@ class BruiloftenMenuItem extends React.Component{
     }
 
     render(){
-        const { image, name, desc} = this.props.details;
+        const { image, name, desc, type} = this.props.details;
         return (
-            <div className="card buffet-item" style={{width: '15rem'}}>
+            <div className="card" style={{width: '16rem'}}>
+                <span class="badge badge-info">{type}</span>
                 <img className="card-img-top card_image" src={image} alt="food"/>
-                <div className="card-body">
+                <div className="card-body item-product">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{desc}</p>
-                    <div className="card-button-group" style={{padding:'3%'}}>
+                    <p className="card-text"></p>
+                    <div>
                         <button hidden={!this.state.logged_in} onClick={() => this.props.addToOrder(this.props.index)} className="btn btn-sm btn-outline-primary" style={{float:'left'}}>Add To Card</button>
                         <DetailsModal
                             key={this.props.index}
