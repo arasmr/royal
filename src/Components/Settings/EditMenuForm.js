@@ -42,6 +42,7 @@ class EditMenuForm extends React.Component {
                         <input 
                             style={{width:'100%',border:'none'}}
                             type="file" 
+                            hidden={this.props.menuItem.image != ""}
                             onChange={(e) => this.props.handlePicture(e ,this.props.index)} 
                         />
                     </Col>
